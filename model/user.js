@@ -21,8 +21,8 @@ const userschema= new mongoose.Schema({
     role:{
         type:String,
         required:[true],
-        role:["super admin","admin","investor"],
-        default:"admin"
+        // role:["super admin","admin","investor"],
+        // default:"admin"
     },
     phone:{
         type:Number,
