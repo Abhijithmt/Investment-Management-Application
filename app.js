@@ -2,12 +2,14 @@ const express = require("express")
 const { default: mongoose } = require("mongoose")
 const app = express()
 const port = 5000
+const dotenv=require('dotenv')
+dotenv.config()
 
 app.use(express.json())
 
 //imporing router
 const userrouter=require('./router/user')
-app.use('/user',userrouter)
+app.use('/api/auth',userrouter)
 
 app.get("/",(req,res)=>{
     res.send("Investment Management Application")

@@ -1,4 +1,5 @@
 const mongoose = require("mongoose")
+const { applyTimestamps } = require("./user")
 const opportunity=new mongoose.Schema({
     companyname:{
         type:String,
@@ -21,7 +22,17 @@ const opportunity=new mongoose.Schema({
         required:[true]
     },
     postedby:{
-        
+        type:String,
+        required:[true]
+    },
+    status:{
+        type:String,
+        required:[true]
+    },
+    createAt:{
+        type:Date,
     }
 
+
 })
+
