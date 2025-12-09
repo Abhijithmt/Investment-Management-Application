@@ -1,0 +1,1 @@
+const investmentoption=require('../model/investment')

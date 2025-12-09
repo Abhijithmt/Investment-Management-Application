@@ -8,7 +8,7 @@ const userschema= new mongoose.Schema({
     email:{
         type:String,
         required:[true],
-        unique:[true,],
+        unique:[true],
         match:[/^\S+@\S+\.\S+$/],
         trim:[true]
     },
@@ -21,17 +21,12 @@ const userschema= new mongoose.Schema({
     role:{
         type:String,
         required:[true],
-        // role:["super admin","admin","investor"],
-        // default:"admin"
+        enum:["super admin","admin","user"],
+        default:"user"
     },
     phone:{
         type:Number,
         minlength:[10,"Must need 10 numbers"]
     },
-    createAt:{
-        type:Date,
-        default:Date.now
-    }
-
-})
+},{timestamps: true})
 module.exports=mongoose.model("User",userschema)

@@ -9,7 +9,17 @@ app.use(express.json())
 
 //imporing router
 const userrouter=require('./router/user')
+const adminrouter=require("./router/admin")
+const superadminrouter=require('./router/superadmin')
+
+
+
 app.use('/api/auth',userrouter)
+app.use('/api/admin',adminrouter)
+app.use('/login',superadminrouter)
+
+
+
 
 app.get("/",(req,res)=>{
     res.send("Investment Management Application")

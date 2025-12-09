@@ -28,11 +28,8 @@ const opportunity=new mongoose.Schema({
     status:{
         type:String,
         required:[true]
-    },
-    createAt:{
-        type:Date,
     }
+},{timestamps:true})
 
-
-})
+module.exports=mongoose.model("opporunities",opportunity)
 

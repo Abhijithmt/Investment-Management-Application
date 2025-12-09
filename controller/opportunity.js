@@ -1,0 +1,1 @@
+const opporunities=require("../model/opportunity")
