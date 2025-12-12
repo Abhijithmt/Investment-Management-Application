@@ -16,7 +16,8 @@ const superadminrouter=require('./router/superadmin')
 
 app.use('/api/auth',userrouter)
 app.use('/api/admin',adminrouter)
-app.use('/login',superadminrouter)
+app.use('/superadminlogin',superadminrouter)
+
 
 
 

@@ -32,7 +32,7 @@ exports.superadminlogin=async (req,res)=>{
 
 
         const token = jwt.sign(
-            {id:superadmin._id},
+            {id:superadmin._id,role:superadmin.role},
             process.env.JWT_SECRET,
             {expiresIn:"7d"}
         )
